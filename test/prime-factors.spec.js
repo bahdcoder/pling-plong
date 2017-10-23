@@ -10,23 +10,11 @@ describe('PrimeFactors', () => {
             expect(primeFactors.number).to.not.be.undefined
             expect(primeFactors.number).to.equal(24)
         })
-
-        it.skip('Should throw an error if a non-number is passed into constructor', () => {
-
-            try { 
-                let primeFactors = new PrimeFactors('NOT_A_NUMBER')            
-            } catch (e) {
-                expect(e instanceof Error).to.be.true 
-                return 
-            }
-
-            expect(true).to.be.false 
-        })
     })
 
     describe('isAPrimeNumber', () => {
         it('Should return true if the number is a prime number', () => {
-            let primeFactors = new PrimeFactors()
+            let primeFactors = new PrimeFactors(34)
             
             expect(primeFactors.isAPrimeNumber(2)).to.be.true 
             expect(primeFactors.isAPrimeNumber(3)).to.be.true 
@@ -35,7 +23,7 @@ describe('PrimeFactors', () => {
         })
 
         it('Should return false if the number is not a prime number', () => {
-            let primeFactors = new PrimeFactors() 
+            let primeFactors = new PrimeFactors(34) 
 
             expect(primeFactors.isAPrimeNumber(4)).to.be.false 
             expect(primeFactors.isAPrimeNumber(6)).to.be.false 
@@ -67,13 +55,6 @@ describe('PrimeFactors', () => {
             expect(primeFactors3.findPrimeFactors()).to.have.members([3,41])
             expect(primeFactors.findPrimeFactors()).to.have.members([2,3])
             expect(primeFactors2.findPrimeFactors()).to.have.members([2,3,5])            
-        })
-
-        it.skip('Should throw an error if the parameter passed in constructor is not a number', () => {
-            let primeFactors = new PrimeFactors('A_STRING')
-
-
-            expect(primeFactors.findPrimeFactors).to.throw(Error("A_STRING must be a number."))
         })
     })
 
