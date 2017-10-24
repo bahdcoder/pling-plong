@@ -1,0 +1,27 @@
+{
+  "name": "raindrop-speak",
+  "version": "1.0.0",
+  "description": "PlingPlong is a simple Node Program, that takes in a number, determines if that number has prime factors, and if yes, generates a particular string, depending on the presence of 3, 5, and 7 in the prime factors of this number.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kati-frantz/pling-plong.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kati-frantz/pling-plong/issues"
+  },
+  "homepage": "https://github.com/kati-frantz/pling-plong#readme"
+}
